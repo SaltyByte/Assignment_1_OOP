@@ -135,6 +135,13 @@ public class WGraph_Algo implements weighted_graph_algorithms, Serializable {
         return list;
     }
 
+    /**
+     * Saves this weighted (undirected) graph as a stream of bits to the given
+     * file name
+     * @param file - the file name (may include a relative path).
+     * @return true - iff the file was successfully saved
+     */
+
     @Override
     public boolean save(String file) {
         if(file == null){
@@ -152,6 +159,14 @@ public class WGraph_Algo implements weighted_graph_algorithms, Serializable {
         return true;
     }
 
+    /**
+     * This method load a graph to this graph algorithm class.
+     * if the file was successfully loaded - the underlying graph
+     * of this class will be changed (to the loaded one), in case the
+     * graph was not loaded the original graph should remain "as is".
+     * @param file - file name
+     * @return true - if the graph was successfully loaded else false.
+     */
 
     @Override
     public boolean load(String file) {
